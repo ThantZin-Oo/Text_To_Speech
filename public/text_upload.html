@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="header">
+      <a href="index.html" id="pdf_tab" class="header_item">PDF Upload</a>
+      <a href="#" id="text_tab" class="active_tab header_item">Text Upload</a>
+    </nav>
+    <hr />
+    <div style="margin-left: 24vw;">
+        <input type="text" name="" id="title" placeholder="Title For Voice.....">
+    </div>
+    <div class="content">
+        <div id="text_upload_section">
+            <div id="quill-editor"></div>
+        </div>
+      <div>
+        <button id="btn" onclick="generateVoice()" class="upload_btn">Upload</button>
+      </div>
+      <div>
+        <audio id="player" controls style="margin-top:10px;"></audio>
+      </div>
+      <a href="#" id="downloadMp3" class="upload_btn">Download</a>
+    </div>
+  </body>
+
+<script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+  <script src="main.js"></script>
+  <script>
+const quill = new Quill("#quill-editor", {
+  theme: "snow",
+});
+  </script>
+</html>

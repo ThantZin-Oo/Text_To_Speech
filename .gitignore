@@ -1,0 +1,9 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# ignore MP3s or generated audio
+*.mp3
+*.wav
